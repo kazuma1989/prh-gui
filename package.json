@@ -46,7 +46,8 @@
         }
     },
     "dependencies": {
-        "electron-compile": "^6.4.2"
+        "electron-compile": "^6.4.2",
+        "prh": "^5.4.3"
     },
     "devDependencies": {
         "babel-plugin-transform-async-to-generator": "^6.24.1",
