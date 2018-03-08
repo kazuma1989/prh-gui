@@ -15,7 +15,7 @@ const opts = {
     rules: [],
 }
 
-const invalidFiles: string[] = [];
+const invalidFiles = [];
 args.files.forEach(filePath => {
     if (opts.verbose) {
         console.warn(`processing ${filePath}...`);
@@ -61,8 +61,8 @@ if (opts.verify && invalidFiles.length !== 0) {
     throw new Error(`${invalidFiles.join(" ,")} failed proofreading`);
 }
 
-function getEngineByTargetDir(targetDir: string) {
-    let rulePaths: string[];
+function getEngineByTargetDir(targetDir) {
+    let rulePaths;
     if (opts.rules && opts.rules[0]) {
         rulePaths = [...opts.rules];
     } else {
@@ -83,7 +83,7 @@ function getEngineByTargetDir(targetDir: string) {
     return fromYAMLFilePaths(...rulePaths);
 }
 
-function indexToLineColumn(index: number, content: string) {
+function indexToLineColumn(index, content) {
     if (index < 0 || content[index] == null) {
         throw new Error(`unbound index value: ${index}`);
     }
