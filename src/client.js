@@ -1,7 +1,8 @@
 // import { exec } from 'child_process';
-import { readFileSync } from 'fs';
+// import { readFileSync } from 'fs';
 import { remote } from 'electron';
-import { fromYAMLFilePaths, getRuleFilePath } from 'prh';
+// import { fromYAMLFilePaths, getRuleFilePath } from 'prh';
+import prhCliImitate from './prh-cli-imitate';
 
 const { BrowserWindow, dialog } = remote;
 
@@ -11,11 +12,11 @@ function openLoadFile() {
   //   console.log(stdout);
   // });
 
-  const engine = fromYAMLFilePaths(getRuleFilePath('C:\\Users\\kebina1\\workspace\\prh-app\\src'))
-  const changeSet = engine.makeChangeSet('C:\\Users\\kebina1\\workspace\\prh-app\\src\\test.adoc');
-  const content = readFileSync('C:\\Users\\kebina1\\workspace\\prh-app\\src\\test.adoc', { encoding: 'utf8' });
-  const result = changeSet.applyChangeSets(content);
-  console.log(result);
+  // const engine = fromYAMLFilePaths(getRuleFilePath('C:\\Users\\kebina1\\workspace\\prh-app\\src'))
+  // const changeSet = engine.makeChangeSet('C:\\Users\\kebina1\\workspace\\prh-app\\src\\test.adoc');
+  // const content = readFileSync('C:\\Users\\kebina1\\workspace\\prh-app\\src\\test.adoc', { encoding: 'utf8' });
+  // const result = changeSet.applyChangeSets(content);
+  // console.log(result);
 
   const modalTarget = BrowserWindow.getFocusedWindow();
 
@@ -35,9 +36,26 @@ function openLoadFile() {
         return;
       }
 
-      filePaths.forEach(path => {
-        console.log(path);
+      const options = {
+        verbose: false,
+        stdout: false,
+        diff: false,
+        replace: false,
+        verify: false,
+        rules: [],
+      };
+      const { result, invalidFiles } = prhCliImitate(filePaths, options);
+
+      result.forEach(({filePath, changeSet}) => {
+        console.log(filePath);
+        changeSet.forEach(console.log);
       });
+
+      console.log(invalidFiles);
+
+      // filePaths.forEach(path => {
+      //   console.log(path);
+      // });
     }
   );
 }
