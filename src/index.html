@@ -10,18 +10,46 @@
 
 <body>
   <div class="container">
-    <h1 class="text-center">proofread-helper</h1>
-    <div data-role="cube"></div>
+    <div class="grid">
+      <div class="row"></div>
+    </div>
 
     <div class="grid">
       <div class="row">
-        <div class="cell offset-10">
+        <div class="cell text-right">
+          <input type="checkbox" data-bind="checked: replace" data-role="switch" data-caption="ファイルを書き換える（SVN管理されているときのみ推奨）">
           <button type="button" class="button primary" data-bind="click: openFiles">
             ファイルを開く
           </button>
         </div>
       </div>
     </div>
+
+    <div class="gird">
+      <div class="row" data-bind="if: !resultList().length">
+        <div class="cell">
+          <h1 class="text-center">proofread-helper</h1>
+          <div data-role="cube"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell" data-bind="foreach: resultList">
+          <p data-bind="text: filePath"></p>
+
+          <div data-bind="foreach: diffList">
+            <div>
+              <b>ERROR:</b>
+              <span data-bind="text: $data"></span>
+            </div>
+          </div>
+          <div data-bind="visible: !diffList.length">
+            表記ゆれはありません
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <script src="./shim/expose.js"></script>
