@@ -3476,6 +3476,10 @@ jmespath@0.15.0:
   version "0.15.0"
   resolved "https://registry.yarnpkg.com/jmespath/-/jmespath-0.15.0.tgz#a3f222a9aae9f966f5d27c796510e28091764217"
 
+jquery@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
+
 js-base64@^2.1.9:
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.3.tgz#2e545ec2b0f2957f41356510205214e98fad6582"
@@ -3858,6 +3862,10 @@ meow@^3.1.0:
     read-pkg-up "^1.0.1"
     redent "^1.0.0"
     trim-newlines "^1.0.0"
+
+metro4-dist@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/metro4-dist/-/metro4-dist-4.0.5.tgz#ce7d5c818ec7c57539a44015e2b78bff051d9a27"
 
 mime-db@~1.33.0:
   version "1.33.0"
@@ -4378,10 +4386,6 @@ performance-now@^0.2.0:
 performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
-
-photonkit@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/photonkit/-/photonkit-0.1.2.tgz#5662c2b02babc11c38cf3f379392e0083ae45512"
 
 pify@^2.0.0, pify@^2.3.0:
   version "2.3.0"

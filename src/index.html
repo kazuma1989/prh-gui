@@ -3,25 +3,29 @@
 
 <head>
   <meta charset="utf-8">
-  <title>prh</title>
+  <title>proofread-helper</title>
 
-  <link rel="stylesheet" href="../node_modules/photonkit/dist/css/photon.css">
+  <link rel="stylesheet" href="../node_modules/metro4-dist/css/metro-all.min.css">
 </head>
 
 <body>
-  <div class="window">
-    <div class="window-content">
-    </div>
+  <div class="container">
+    <h1 class="text-center">proofread-helper</h1>
+    <div data-role="cube"></div>
 
-    <footer class="toolbar toolbar-footer">
-      <div class="toolbar-actions">
-        <button type="button" class="btn btn-large btn-primary pull-right" data-bind="click: openFiles">
-          ファイルを開く
-        </button>
+    <div class="grid">
+      <div class="row">
+        <div class="cell offset-10">
+          <button type="button" class="button primary" data-bind="click: openFiles">
+            ファイルを開く
+          </button>
+        </div>
       </div>
-    </footer>
+    </div>
   </div>
 
+  <script src="./shim/expose.js"></script>
+  <script src="../node_modules/metro4-dist/js/metro.min.js"></script>
   <script src="./client.js"></script>
 </body>
 
