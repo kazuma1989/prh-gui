@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    Well hey there!!!
 
-    <pre id="editor"></pre>
+<head>
+  <meta charset="utf-8">
+  <title>prh</title>
 
-    <button type="button" class="btn-sm btn-primary" onclick="window.openLoadFile()">読み込み</button>
+  <link rel="stylesheet" href="../node_modules/photonkit/dist/css/photon.css">
+</head>
 
-    <footer></footer>
+<body>
+  <div class="window">
+    <div class="window-content">
+    </div>
 
-    <script src="./client.js"></script>
-  </body>
+    <footer class="toolbar toolbar-footer">
+      <div class="toolbar-actions">
+        <button type="button" class="btn btn-large btn-primary pull-right" data-bind="click: openFiles">
+          ファイルを開く
+        </button>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./client.js"></script>
+</body>
+
 </html>

@@ -3626,6 +3626,10 @@ klaw@^2.1.0:
   dependencies:
     graceful-fs "^4.1.9"
 
+knockout@^3.5.0-beta:
+  version "3.5.0-beta"
+  resolved "https://registry.yarnpkg.com/knockout/-/knockout-3.5.0-beta.tgz#0a90af428f6b5dfbba73fe57be1dc78bb3812758"
+
 lazy-cache@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
@@ -4374,6 +4378,10 @@ performance-now@^0.2.0:
 performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
+
+photonkit@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/photonkit/-/photonkit-0.1.2.tgz#5662c2b02babc11c38cf3f379392e0083ae45512"
 
 pify@^2.0.0, pify@^2.3.0:
   version "2.3.0"

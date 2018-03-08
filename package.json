@@ -47,6 +47,8 @@
   },
   "dependencies": {
     "electron-compile": "^6.4.2",
+    "knockout": "^3.5.0-beta",
+    "photonkit": "^0.1.2",
     "prh": "^5.4.3"
   },
   "devDependencies": {
