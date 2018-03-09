@@ -36,7 +36,7 @@ export default class App {
         this.resultList(resultList.map(({ filePath, diffList }) => {
           return {
             filePath,
-            diffList: diffList.map(({ line, column, before, after }) => `${line + 1},${column + 1}: ${before} → ${after}`)
+            diffList: diffList.map(({ line, column, before, after }) => `行${line + 1}, ${column + 1}文字目: ${before} → ${after}`)
           };
         }));
       }

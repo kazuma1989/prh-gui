@@ -17,7 +17,7 @@
     <div class="grid">
       <div class="row">
         <div class="cell text-right">
-          <input type="checkbox" data-bind="checked: replace" data-role="switch" data-caption="ファイルを書き換える（SVN管理されているときのみ推奨）">
+          <input type="checkbox" data-bind="checked: replace" data-role="switch" data-caption="ファイルを書き換える（バージョン管理を推奨）">
           <button type="button" class="button primary" data-bind="click: openFiles">
             ファイルを開く
           </button>
@@ -35,11 +35,14 @@
 
       <div class="row">
         <div class="cell" data-bind="foreach: resultList">
-          <p data-bind="text: filePath"></p>
+          <p>
+            <span class="mif-file-text"></span>
+            <span data-bind="text: filePath"></span>
+          </p>
 
           <div data-bind="foreach: diffList">
             <div>
-              <b>ERROR:</b>
+              <b>FOUND:</b>
               <span data-bind="text: $data"></span>
             </div>
           </div>

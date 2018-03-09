@@ -2,7 +2,7 @@
   "name": "prh-app",
   "productName": "prh-app",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "proofread-helper の GUI 版アプリ",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
